@@ -1,0 +1,45 @@
+.header-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  color: #222;
+  padding: 160px 0;
+
+    .header-hero__container {
+        position: relative;
+        z-index: 1;
+
+            .header-hero__content {
+                max-width: 600px;
+            }
+    }
+}
+
+/* === ADAPTIVE === */
+@media (max-width: 768px) {
+  .header-hero {
+    padding: 100px 0;
+    background-position: center;
+  }
+
+  .header-hero__title {
+    font-size: 32px;
+  }
+
+  .header-hero__content {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.btn--primary {
+  display: inline-block;
+  background-color: #ffc000;
+  color: #222;
+  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
