@@ -1,0 +1,61 @@
+/*****************************/
+/* PARTNERS SECTION          */
+/*****************************/
+.partners {
+  padding: 40px 0;
+  background: var(--tertiary-background-color);
+}
+
+.partners__carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Logos in a row and scroll like a carousel */
+.partners__list {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0;
+
+  /* hides a non-beautiful scrollbar */
+  scrollbar-width: none;
+}
+.partners__list::-webkit-scrollbar {
+  display: none;
+}
+
+/* element */
+.partners__item {
+  scroll-snap-align: center;
+  flex: 0 0 auto;
+}
+
+/* logo */
+.partners__logo {
+  width: 140px;
+  height: auto;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+
+.partners__logo:hover {
+  opacity: 1;
+}
+
+
+/**********************************************/
+/* Desktop view just for partners        */
+/**********************************************/
+@media (min-width: 1201px) {
+  .partners__carousel {
+    gap: 20px;
+  }
+
+  .partners__logo {
+    width: 150px;
+  }
+}

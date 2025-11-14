@@ -1,21 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    scroll-behavior: smooth;
+  --accent-title-color: #F8B803;
+  --big-title-color: #242424;
+  --subtitle-color: #777777;
+  --text-color: #777777;
+  --title-on-dark-color: #FFFFFF;
+  --subtitle-on-dark-color: #FFFFFF;
+  --text-on-dark-color: #6B6B6B;
+  --light-background-color: #FFFFFF;
+  --dark-background-color: #242424;
+  --footer-dark-background-color: #1E1E1E;
+  --tertiary-background-color: #FAFAFA;
+  --accent-button-color: #F8B803;
+  --accent-color: #F8B803;
+  --contact-form-input-space-color: #E0E0E0;
+  --contact-form-titles-color: #E0E0E0;
+  --subscruption-form-input-space-color: #313131;
+  --burger-color: #313131;
+  --price-color: #669904;
+  scroll-behavior: smooth;
+  font-family: "Work Sans", sans-serif;
 }
 
 img {
-    display: block;
-    max-width: 50%;
+  display: block;
+  max-width: 50%;
+}
+
+ul {
+  list-style: none;
 }
 
 .container {
-    max-width: 1200px;
-    margin: auto;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
 }

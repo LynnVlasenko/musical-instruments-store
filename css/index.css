@@ -1,2 +1,5 @@
-@import 'global.css';
-@import 'index.header-hero.css';
+@import "global.css";
+@import "global.header-nav.css";
+@import "index.header-hero.css";
+@import "global.carousel-arrow.css";
+@import "index.partners.css";

@@ -1,0 +1,181 @@
+/* ============================== */
+/* HEADER NAVIGATION - MOBILE FIRST */
+/* ============================== */
+
+.header-nav {
+  background-color: var(--accent-color);
+  width: 100%;
+  position: relative;
+}
+
+/* Top bar (mobile-first: hidden) */
+
+.header-nav__top-background {
+    background-color: var(--tertiary-background-color);
+}
+
+.header-nav__top {
+  display: none;
+  padding: 10px 0;
+  font-size: 14px;
+  color: var(--text-color);
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 20px;
+}
+
+.header-nav__contacts {
+  display: flex;
+  gap: 15px;
+}
+
+.header-nav__email,
+.header-nav__phone {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+
+/* --------------------------- */
+/* MAIN NAV – MOBILE VERSION   */
+/* --------------------------- */
+
+.header-nav__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  position: relative;
+  padding-inline: 20px;
+}
+
+/* Logo */
+.header-nav__logo-img {
+  max-width: 140px;
+  height: auto;
+}
+
+/* BURGER */
+.header-nav__burger {
+  width: 28px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header-nav__burger-line {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--big-title-color);
+  border-radius: 3px;
+}
+
+/* MENU (hidden on mobile) */
+.header-nav__menu {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Social links also hidden on mobile */
+.social-links--header {
+  display: none;
+}
+
+/* --------------------------- */
+/* MOBILE DROPDOWN STYLES      */
+/* --------------------------- */
+
+/* This class is added via JS: .header-nav--open */
+.header-nav--open {
+  background-color: var(--accent-color);
+  padding-bottom: 20px;
+}
+
+.header-nav--open .header-nav__menu {
+  display: flex;
+  margin-top: 20px;
+}
+
+.header-nav--open .header-nav__menu-link {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.header-nav--open .social-links--header {
+  display: flex;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.header-nav--open .social-links__icon {
+  fill: white;
+}
+
+.header-nav--open .header-nav__top {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 6px;
+  background: none;
+  color: var(--text-on-dark-color);
+}
+
+.header-nav--open .header-nav__email,
+.header-nav--open .header-nav__phone {
+  color: var(--text-on-dark-color);
+}
+
+/* ============================== */
+/* DESKTOP (min-width: 990px)     */
+/* ============================== */
+
+@media (min-width: 990px) {
+
+  /* Show top bar */
+  .header-nav__top {
+    display: flex;
+  }
+
+  /* Main nav layout */
+  .header-nav__main {
+    gap: 40px;
+  }
+
+  /* Show menu horizontally */
+  .header-nav__menu {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .header-nav__menu-link {
+    text-decoration: none;
+    color: var(--title-on-dark-color);
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  /* Social icons visible */
+  .social-links--header {
+    display: flex;
+    gap: 15px;
+  }
+
+  .social-links__icon {
+    width: 18px;
+    height: 18px;
+    fill: var(--title-on-dark-color);
+  }
+
+  /* Hide burger */
+  .header-nav__burger {
+    display: none;
+  }
+}

@@ -1,45 +1,119 @@
+/* ======================================= */
+/* HEADER HERO — MOBILE FIRST               */
+/* ======================================= */
+
 .header-hero {
-  position: relative;
+  width: 100%;
+  min-height: 520px;
+  padding: 110px 0 80px;
   background-size: cover;
-  background-position: center right;
+  background-position: center;
   background-repeat: no-repeat;
-  color: #222;
-  padding: 160px 0;
-
-    .header-hero__container {
-        position: relative;
-        z-index: 1;
-
-            .header-hero__content {
-                max-width: 600px;
-            }
-    }
+  position: relative;
+  color: var(--big-title-color);
 }
 
-/* === ADAPTIVE === */
-@media (max-width: 768px) {
-  .header-hero {
-    padding: 100px 0;
-    background-position: center;
-  }
-
-  .header-hero__title {
-    font-size: 32px;
-  }
-
-  .header-hero__content {
-    text-align: center;
-    margin: 0 auto;
-  }
+.header-hero__content {
+  max-width: 560px;
 }
 
-.btn--primary {
-  display: inline-block;
-  background-color: #ffc000;
-  color: #222;
+/* Title small on mobile */
+.header-hero__title {
+  font-size: 13px;
+  color: var(--accent-title-color);
+  letter-spacing: 0.08em;
   font-weight: 600;
-  padding: 14px 32px;
+  margin-bottom: 18px;
+}
+
+.header-hero__descriptor {
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 26px;
+  color: var(--big-title-color);
+}
+
+.header-hero__highlight {
+  color: var(--accent-color);
+}
+
+.header-hero__dot {
+  color: var(--accent-color);
+}
+
+/* Underline + text row */
+.header-hero__services-descriptor {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.header-hero__underline {
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-color);
+  border-radius: 3px;
+}
+
+.header-hero__text {
+  font-size: 15px;
+  color: var(--text-color);
+}
+
+.header-hero__price {
+  color: #4CAF50;
+  font-weight: 700;
+}
+
+.header-hero__cta {
+  display: inline-block;
+  background-color: var(--accent-button-color);
+  padding: 14px 28px;
+  color: var(--big-title-color);
+  font-weight: 600;
   border-radius: 6px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+}
+
+/* ======================================= */
+/* Hero image shrinking behavior            */
+/* ======================================= */
+
+@media (max-width: 760px) {
+  .header-hero {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-hero {
+    background-size: cover;
+  }
+
+  .header-hero__descriptor {
+    font-size: 26px;
+  }
+}
+
+/* ======================================= */
+/* DESKTOP BREAKPOINTS                     */
+/* ======================================= */
+
+@media (min-width: 768px) {
+  .header-hero__descriptor {
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-hero {
+    background-position: center right;
+    background-size: cover;
+  }
+
+  .header-hero__descriptor {
+    font-size: 52px;
+  }
 }

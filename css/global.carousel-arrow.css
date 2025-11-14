@@ -1,0 +1,55 @@
+/***********************************/
+/*  UNIVERSAL CAROUSEL ARROWS      */
+/*  (for all site carousels)    */
+/***********************************/
+.carousel-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(0, 0, 0, 0.45); /* dark translucent background */
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease;
+}
+
+.carousel-arrow svg {
+  width: 22px;
+  height: 22px;
+  opacity: 0.8;
+}
+
+.carousel-arrow--prev {
+  transform: rotate(180deg); 
+}
+
+/* Hover – mobile also has a reaction */
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/**********************************************/
+/* Desktop view of arrows (>=1201px)       */
+/**********************************************/
+@media (min-width: 1201px) {
+  .carousel-arrow {
+    background: transparent; /* without background */
+    width: auto;
+    height: auto;
+  }
+
+  .carousel-arrow svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .carousel-arrow:hover {
+    background: transparent;
+    opacity: 0.6;
+  }
+}
