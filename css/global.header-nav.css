@@ -103,7 +103,7 @@
 }
 
 .header-nav--open .header-nav__menu-link {
-  color: white;
+  color: var(--title-on-dark-color);
   font-size: 14px;
   font-weight: 700;
 }
@@ -115,7 +115,7 @@
 }
 
 .header-nav--open .social-links__icon {
-  fill: white;
+  fill: var(--title-on-dark-color);
 }
 
 .header-nav--open .header-nav__top {
