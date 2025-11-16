@@ -1,0 +1,139 @@
+/* ============================= */
+/* Promo Offers — Base */
+/* ============================= */
+
+.promo-offers {
+  padding: 20px 0px;
+}
+
+.promo-offers__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.promo-offers__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px;
+  overflow: hidden;
+  min-height: 300px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+/* Text content */
+.promo-offers__content {
+  z-index: 2;
+  max-width: 100%;
+}
+
+.promo-offers__label {
+  font-size: 14px;
+  color: var(--accent-color);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.promo-offers__label--light {
+  color: var(--subtitle-on-dark-color);
+}
+
+.promo-offers__title {
+  margin-top: 12px;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--big-title-color);
+  line-height: 1.1;
+}
+
+.promo-offers__title--light {
+  color: var(--title-on-dark-color);
+}
+
+.promo-offers__dot {
+  color: var(--accent-color);
+}
+
+.promo-offers__price {
+  margin-top: 14px;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.promo-offers__price--dark {
+  margin-top: 14px;
+  font-size: 18px;
+  color: var(--text-color);
+  visibility: hidden;
+}
+
+.promo-offers__price-highlight {
+  color: var(--price-color);
+  font-weight: 700;
+}
+
+/* Buttons */
+.promo-offers__btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background-color: var(--dark-background-color);
+  color: var(--title-on-dark-color);
+  font-weight: 600;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+
+.promo-offers__btn:hover {
+  opacity: 0.9;
+}
+
+.promo-offers__btn--light {
+  background-color: var(--light-background-color);;
+  color: var(--big-title-color);
+}
+
+/* Specific images */
+.promo-offers__image--light {
+  background-image: url("../img/index/promo-offers/special-offer-banner.png");
+}
+
+.promo-offers__image--dark {
+  background-image: url("../img/index/promo-offers/promotion-banner.jpg");
+}
+
+/* ============================= */
+/* Media ≥ 760px — Still 2 cards in a row, just bigger */
+/* ============================= */
+@media (min-width: 760px) {
+  .promo-offers__grid {
+    flex-direction: row;
+  }
+
+  .promo-offers__card {
+    width: calc(50% - 10px);
+  }
+}
+
+/* ============================= */
+/* Media ≥ 1200px — Full desktop spacing & proportions */
+/* ============================= */
+@media (min-width: 1200px) {
+  .promo-offers__card {
+    padding: 60px 50px;
+    min-height: 380px;
+  }
+
+  .promo-offers__title {
+    font-size: 48px;
+  }
+
+  .promo-offers__image {
+    width: 100%;
+  }
+}

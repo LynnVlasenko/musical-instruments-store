@@ -21,7 +21,7 @@
   color: var(--text-color);
   justify-content: space-between;
   align-items: center;
-  padding-inline: 20px;
+  padding-inline: 40px;
 }
 
 .header-nav__contacts {
@@ -44,14 +44,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 0;
+  padding: 15px 0;
   position: relative;
-  padding-inline: 20px;
+  padding-inline: 40px;
 }
 
 /* Logo */
 .header-nav__logo-img {
-  max-width: 140px;
+  max-width: 157px;
   height: auto;
 }
 
@@ -104,8 +104,8 @@
 
 .header-nav--open .header-nav__menu-link {
   color: white;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .header-nav--open .social-links--header {
@@ -158,8 +158,8 @@
   .header-nav__menu-link {
     text-decoration: none;
     color: var(--title-on-dark-color);
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 600;
   }
 
   /* Social icons visible */

@@ -5,12 +5,13 @@
 .header-hero {
   width: 100%;
   min-height: 520px;
-  padding: 110px 0 80px;
+  padding: 210px 0px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
   color: var(--big-title-color);
+  background-image: url("../img/index/header-hero-bg.jpg");
 }
 
 .header-hero__content {
@@ -19,7 +20,7 @@
 
 /* Title small on mobile */
 .header-hero__title {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--accent-title-color);
   letter-spacing: 0.08em;
   font-weight: 600;
@@ -27,9 +28,9 @@
 }
 
 .header-hero__descriptor {
-  font-size: 32px;
+  font-size: 48px;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 26px;
   color: var(--big-title-color);
 }
@@ -63,17 +64,17 @@
 }
 
 .header-hero__price {
-  color: #4CAF50;
+  color: #4caf50;
   font-weight: 700;
 }
 
 .header-hero__cta {
   display: inline-block;
   background-color: var(--accent-button-color);
-  padding: 14px 28px;
+  padding: 20px 32px;
   color: var(--big-title-color);
   font-weight: 600;
-  border-radius: 6px;
+  border-radius: 4px;
   text-decoration: none;
 }
 
@@ -81,9 +82,22 @@
 /* Hero image shrinking behavior            */
 /* ======================================= */
 
+@media (max-width: 996px) {
+  .header-hero {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+}
+
 @media (max-width: 760px) {
   .header-hero {
     background-size: cover;
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+
+  .header-hero__descriptor {
+    font-size: 48px;
   }
 }
 
@@ -91,25 +105,21 @@
   .header-hero {
     background-size: cover;
   }
-
-  .header-hero__descriptor {
-    font-size: 26px;
-  }
 }
 
 /* ======================================= */
 /* DESKTOP BREAKPOINTS                     */
 /* ======================================= */
 
-@media (min-width: 768px) {
+@media (min-width: 996px) {
   .header-hero__descriptor {
-    font-size: 42px;
+    font-size: 51px;
   }
 }
 
 @media (min-width: 1200px) {
   .header-hero {
-    background-position: center right;
+    background-position: center;
     background-size: cover;
   }
 
