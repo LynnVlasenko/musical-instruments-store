@@ -1,0 +1,104 @@
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/other/jiwa-studio-jwl100-single-row-tambourine.jpeg"
+    alt="Jiwa Studio JWL100 Single Row Tambourine"
+  />
+  <h3 class="shop-card__title">Digital Keyboard DK01</h3>
+  <p class="shop-card__price">$230.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/other/kurumba-kk400-bongo-drum-in-green.jpeg"
+    alt="Kurumba KK400 Bongo Drum in Green"
+  />
+  <h3 class="shop-card__title">Studio Microphone M02</h3>
+  <p class="shop-card__price">$140.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/other/bosner-at1-accordion-in-gold.jpeg"
+    alt="Bosner AT1 Accordion in Gold"
+  />
+  <h3 class="shop-card__title">Monitor Headphones H01</h3>
+  <p class="shop-card__price">$120.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/other/hohner-silver-star-erx3-harmonica.jpeg"
+    alt="Hohner Silver Star ERX3 Harmonica"
+  />
+  <h3 class="shop-card__title">Instrument Stand S01</h3>
+  <p class="shop-card__price">$40.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<!-- === OOB UPDATE ДЛЯ МЕНЮ === -->
+<li
+  id="cat-electric"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.electric-guitars.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Electric Guitars
+</li>
+
+<li
+  id="cat-acoustic"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.acoustic-guitars.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Acoustic Guitars
+</li>
+
+<li
+  id="cat-drums"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.drums.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Drums
+</li>
+
+<li
+  id="cat-orchestric"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.orchestric.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Orchestric
+</li>
+
+<li
+  id="cat-other"
+  class="shop__categories-item shop__categories-item--active"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.other.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Other
+</li>

@@ -1,0 +1,104 @@
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/electric-guitars/raven-bee-rb500-exotic-style-electric-guitar.jpeg"
+    alt="Raven Bee RB500 Exotic Style Guitar"
+  />
+  <h3 class="shop-card__title">Raven Bee RB500 Exotic Style Guitar</h3>
+  <p class="shop-card__price">$450.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/electric-guitars/dickson-studio-er100-electric-guitar.jpeg"
+    alt="Dickson Studio ER100 Electric Guitar"
+  />
+  <h3 class="shop-card__title">Dickson Studio ER100 Electric Guitar</h3>
+  <p class="shop-card__price">$180.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/electric-guitars/dean-doe-tro4506-electric-guitar.jpeg"
+    alt="Dean Doe TRO4506 Electric Guitar"
+  />
+  <h3 class="shop-card__title">Dean Doe TRO4506 Electric Guitar</h3>
+  <p class="shop-card__price">$220.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/electric-guitars/raven-classic-rt45-electric-guitar.jpeg"
+    alt="Raven Classic RT45 Electric Guitar"
+  />
+  <h3 class="shop-card__title">Raven Classic RT45 Electric Guitar</h3>
+  <p class="shop-card__price">$300.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<!-- === OOB UPDATE ДЛЯ МЕНЮ === -->
+<li
+  id="cat-electric"
+  class="shop__categories-item shop__categories-item--active"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.electric-guitars.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Electric Guitars
+</li>
+
+<li
+  id="cat-acoustic"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.acoustic-guitars.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Acoustic Guitars
+</li>
+
+<li
+  id="cat-drums"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.drums.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Drums
+</li>
+
+<li
+  id="cat-orchestric"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.orchestric.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Orchestric
+</li>
+
+<li
+  id="cat-other"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.other.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Other
+</li>

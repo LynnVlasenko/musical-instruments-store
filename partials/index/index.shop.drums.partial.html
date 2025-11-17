@@ -1,0 +1,105 @@
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/drums/bluewater-bwl1000-ultimate-snare-drum.jpeg"
+    alt="Bluewater BWL1000 Ultimate Snare Drum"
+  />
+  <h3 class="shop-card__title">Maple DR01 Drum Kit</h3>
+  <p class="shop-card__price">$780.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/drums/ericson-black-white-snare-drum.jpeg"
+    alt="Ericson Black&White Snare Drum"
+  />
+  <h3 class="shop-card__title">Jazz DR02 Drum Kit</h3>
+  <p class="shop-card__price">$620.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/drums/ericson-white-crystal-snare-drum.jpeg"
+    alt="Ericson White Crystal Snare Drum"
+  />
+  <h3 class="shop-card__title">Studio DR03 Drum Kit</h3>
+  <p class="shop-card__price">$540.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/drums/ericson-beech-wood-snare-drum.jpeg"
+    alt="Ericson Beech Wood Snare Drum"
+  />
+  <h3 class="shop-card__title">Compact DR04 Drum Kit</h3>
+  <p class="shop-card__price">$420.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<!-- === OOB UPDATE ДЛЯ МЕНЮ === -->
+<li
+  id="cat-electric"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.electric-guitars.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Electric Guitars
+</li>
+
+<li
+  id="cat-acoustic"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.acoustic-guitars.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Acoustic Guitars
+</li>
+
+<li
+  id="cat-drums"
+  class="shop__categories-item shop__categories-item--active"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.drums.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Drums
+</li>
+
+<li
+  id="cat-orchestric"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.orchestric.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Orchestric
+</li>
+
+<li
+  id="cat-other"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.other.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Other
+</li>
+

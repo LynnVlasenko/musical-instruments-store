@@ -1,0 +1,104 @@
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/acoustic-guitars/deanson-vv02-acoustic-guitar.jpeg"
+    alt="Deanson VV02 Acoustic Guitar"
+  />
+  <h3 class="shop-card__title">Western AG01 Acoustic Guitar</h3>
+  <p class="shop-card__price">$260.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/acoustic-guitars/kuro-music-studio-s-35-acoustic-guitar.jpeg"
+    alt="Kuro Music Studio S-35 Acoustic Guitar"
+  />
+  <h3 class="shop-card__title">Classic Wood AG03 Acoustic Guitar</h3>
+  <p class="shop-card__price">$210.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/acoustic-guitars/raven-rt1-acoustic-guitar.jpeg"
+    alt="Raven RT1 Acoustic Guitar"
+  />
+  <h3 class="shop-card__title">Folk Brown AG04 Acoustic Guitar</h3>
+  <p class="shop-card__price">$180.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/acoustic-guitars/fogue-ra-090-acoustic-guitar.jpeg"
+    alt="Fogue RA-090 Acoustic Guitar"
+  />
+  <h3 class="shop-card__title">Traveler AG05 Acoustic Guitar</h3>
+  <p class="shop-card__price">$150.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<!-- === OOB UPDATE ДЛЯ МЕНЮ === -->
+<li
+  id="cat-electric"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.electric-guitars.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Electric Guitars
+</li>
+
+<li
+  id="cat-acoustic"
+  class="shop__categories-item shop__categories-item--active"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.acoustic-guitars.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Acoustic Guitars
+</li>
+
+<li
+  id="cat-drums"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.drums.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Drums
+</li>
+
+<li
+  id="cat-orchestric"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.orchestric.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Orchestric
+</li>
+
+<li
+  id="cat-other"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.other.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Other
+</li>

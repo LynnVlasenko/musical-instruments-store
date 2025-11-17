@@ -1,0 +1,105 @@
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/orchestric/donny-stavanger-srt12-alto-saxophone.jpeg"
+    alt="Donny Stavanger SRT12 Alto Saxophone"
+  />
+  <h3 class="shop-card__title">Violin Master V01</h3>
+  <p class="shop-card__price">$340.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/orchestric/simona-sr-v-professional-violin.jpeg"
+    alt="Simona SR-V Professional Violin"
+  />
+  <h3 class="shop-card__title">Cello Classic C01</h3>
+  <p class="shop-card__price">$400.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/orchestric/aer-b-flat-professional-bass-horn.jpeg"
+    alt="AER B-Flat Professional Bass Horn"
+  />
+  <h3 class="shop-card__title">Silver Flute F01</h3>
+  <p class="shop-card__price">$190.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<article class="shop-card">
+  <img
+    class="shop-card__img"
+    src="img/goods/orchestric/muratti-professional-mb-oboe.jpeg"
+    alt="Muratti Professional MB Oboe"
+  />
+  <h3 class="shop-card__title">Jazz Saxophone S01</h3>
+  <p class="shop-card__price">$510.00</p>
+  <button class="shop-card__btn">Add to Cart</button>
+</article>
+
+<!-- === OOB UPDATE ДЛЯ МЕНЮ === -->
+<li
+  id="cat-electric"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.electric-guitars.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Electric Guitars
+</li>
+
+<li
+  id="cat-acoustic"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.acoustic-guitars.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Acoustic Guitars
+</li>
+
+<li
+  id="cat-drums"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.drums.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Drums
+</li>
+
+<li
+  id="cat-orchestric"
+  class="shop__categories-item shop__categories-item--active"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.orchestric.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Orchestric
+</li>
+
+<li
+  id="cat-other"
+  class="shop__categories-item"
+  hx-swap-oob="true"
+  data-hx-get="partials/index/index.shop.other.partial.html"
+  data-hx-trigger="click"
+  data-hx-target=".shop__grid"
+  data-hx-swap="innerHTML"
+>
+  Other
+</li>
+

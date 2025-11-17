@@ -1,0 +1,141 @@
+/* ===== SHOP BLOCK ===== */
+
+.shop {
+  padding: 40px 0;
+  background-color: var(--light-background-color);
+  text-align: center;
+}
+
+.shop__label {
+  font-size: 14px;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.shop__title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--big-title-color);
+  margin-bottom: 12px;
+}
+
+.shop__subtitle {
+  color: var(--subtitle-color);
+  max-width: 500px;
+  margin: 0 auto 32px;
+}
+
+/* ===== CATEGORY MENU ===== */
+
+.shop__categories {
+  margin-bottom: 32px;
+}
+
+.shop__categories-list {
+  display: flex;
+  gap: 24px;
+  justify-content: left;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-bottom: 1px solid var(--contact-form-input-space-color); /* сіра лінія */
+  scrollbar-width: thin;
+  scrollbar-color: var(--contact-form-input-space-color) transparent;
+}
+
+.shop__categories-list::-webkit-scrollbar {
+  display: none;
+  height: 6px;
+}
+
+.shop__categories-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.shop__categories-list::-webkit-scrollbar-thumb {
+  background: var(--contact-form-input-space-color);
+  border-radius: 10px;
+}
+
+.shop__categories-item {
+  padding: 8px 0;
+  font-weight: 500;
+  color: var(--subtitle-color);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.shop__categories-item--active {
+  color: var(--big-title-color);
+  border-color: var(--accent-color);
+}
+
+/* ===== PRODUCT GRID ===== */
+
+.shop__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+/* ===== CARD ===== */
+
+.shop-card {
+  text-align: center;
+}
+
+.shop-card__img {
+  margin: 0 auto 16px;
+}
+
+.shop-card__title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--big-title-color);
+  margin-bottom: 12px;
+}
+
+.shop-card__price {
+  color: var(--accent-color);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.shop-card__btn {
+  background-color: var(--big-title-color);
+  color: var(--title-on-dark-color);
+  border: none;
+  padding: 10px 24px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.shop-card__btn:hover {
+  background-color: #191919;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* 2 columns: 480px–990px */
+@media (min-width: 480px) {
+  .shop__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .shop__categories-list {
+    justify-content: center;
+  }
+}
+
+/* Horiz scroll for categories from 680px downward — already mobile-first */
+/* Desktop grid: 4 cards */
+@media (min-width: 990px) {
+  .shop__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .shop__categories-list {
+    justify-content: center;
+  }
+}
