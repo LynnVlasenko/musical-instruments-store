@@ -86,7 +86,10 @@
 }
 
 .shop-card__img {
-  margin: 0 auto 16px;
+  /*margin: 0 auto 16px;*/
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .shop-card__title {
@@ -114,7 +117,7 @@
 }
 
 .shop-card__btn:hover {
-  background-color: #191919;
+  background-color: var(--accent-button-color);
 }
 
 /* ===== RESPONSIVE ===== */

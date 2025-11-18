@@ -44,5 +44,11 @@ ul {
 .container {
   max-width: 1200px;
   margin: auto;
-  padding: 0px 40px;
+  padding: 0px 24px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0px 40px;
+  }
 }

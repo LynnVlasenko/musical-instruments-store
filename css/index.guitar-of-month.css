@@ -1,0 +1,189 @@
+/* ---------------------- */
+/*  GUITAR OF THE MONTH   */
+/* ---------------------- */
+
+.guitar-month {
+  background-image: url("../img/index/guitar-month/guitar-of-the-month-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 90px 0;
+  color: var(--title-on-dark-color);
+  width: 100%;
+
+  position: relative;
+  overflow: hidden; /* важливо для псевдоелемента */
+}
+
+.guitar-month::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(119, 119, 119, 0.2); /* ← це затемнення */
+  z-index: 1;
+}
+
+.guitar-month__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+/* IMAGE */
+.guitar-month__image-wrapper {
+  width: 100%;
+  align-self: flex-start; /* картинка прилипає до верху */
+  display: flex;
+  justify-content: center;
+}
+
+/* IMAGE — ключове обмеження */
+.guitar-month__image {
+  height: auto;
+  width: 43%;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+}
+/*.guitar-month__image-wrapper {
+  width: 70%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.guitar-month__image {
+  width: 100%;
+  height: 100%;
+}
+*/
+/* CONTENT */
+.guitar-month__subtitle {
+  font-size: 12px;
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.guitar-month__title {
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--title-on-dark-color);
+  margin-top: 20px;
+}
+
+.guitar-month__title-accent {
+  color: var(--accent-color);
+}
+
+.guitar-month__divider {
+  display: block;
+  width: 9%;
+  height: 2px;
+  background-color: var(--accent-color);
+  margin: 15px 0px;
+}
+
+.guitar-month__description {
+  color: var(--text-on-dark-color);
+  line-height: 1.5;
+  margin-bottom: 40px;
+  font-size: 16px;
+  vertical-align: baseline;
+}
+
+/* TIMER */
+.timer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  gap: 16px;
+}
+
+.timer__item {
+  text-align: center;
+  flex: 1;
+}
+
+.timer__number {
+  display: block;
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: var(--title-on-dark-color);
+  text-anchor: middle;
+}
+
+.timer__label {
+  font-size: 1rem;
+  color: var(--text-on-dark-color);
+  text-anchor: middle;
+}
+
+/* --------------------- */
+/*     MEDIA QUERIES     */
+/* --------------------- */
+
+/* 770px — переставляємо фото зліва, текст справа */
+@media (min-width: 767px) {
+  .guitar-month {
+    padding: 105px 0 95px;
+  }
+  .guitar-month__container {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .guitar-month__image-wrapper {
+    width: 42%;
+  }
+
+  .guitar-month__image {
+    width: 42%;
+  }
+
+  .guitar-month__content {
+    width: 58%;
+  }
+
+  .guitar-month__title {
+    font-size: 52px;
+  }
+
+  .timer__number {
+    font-size: 36px;
+  }
+}
+
+/* 1200px+ — збільшуємо пропорції */
+@media (min-width: 1200px) {
+  .guitar-month {
+    padding: 150px 0 130px;
+  }
+
+  .guitar-month__title {
+    font-size: 54px;
+  }
+
+  .guitar-month__image-wrapper {
+    width: 40%;
+  }
+
+  .guitar-month__image {
+    width: 47%;
+  }
+
+  .guitar-month__content {
+    width: 62%;
+  }
+
+  .timer {
+    gap: 32px;
+  }
+
+  .timer__number {
+    font-size: 42px;
+  }
+}
