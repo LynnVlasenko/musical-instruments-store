@@ -150,16 +150,13 @@
   .contacts__info-title {
     min-width: 110px;
   }
+
 }
 
 /* ====== VERY LARGE (>=1200px) ====== */
 @media (min-width: 1200px) {
   .contacts {
     padding: 80px 0;
-  }
-
-  .contacts__right {
-    padding: 40px;
   }
 
   .contacts__map {

@@ -9,7 +9,7 @@
       href="img/global/favicon.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/index.css" />
     <script
       src="https://unpkg.com/htmx.org@1.9.10"
       integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
@@ -28,6 +28,8 @@
         data-hx-swap="outerHTML"
         data-hx-get="partials/index/index.header-hero.partial.html"
       ></section>
+    </header>
+    <main class="main">
       <section
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
@@ -63,9 +65,14 @@
         data-hx-swap="outerHTML"
         data-hx-get="partials/index/index.contacts.partial.html"
       ></section>
-    </header>
-    <main class="main"></main>
+    </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <footer
+        data-hx-trigger="load"
+        data-hx-swap="outerHTML"
+        data-hx-get="partials/global/global.footer.partial.html"
+      ></footer>
+    </footer>
   </body>
 </html>

@@ -47,6 +47,10 @@ ul {
   padding: 0px 24px;
 }
 
+.dot {
+  color: var(--accent-color);
+}
+
 @media (min-width: 768px) {
   .container {
     padding: 0px 40px;
