@@ -72,6 +72,20 @@
   width: 100%;
   background-color: var(--big-title-color);
   border-radius: 3px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* ANIMATION: burger -> X */
+.header-nav--open .header-nav__burger-line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.header-nav--open .header-nav__burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.header-nav--open .header-nav__burger-line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 /* MENU (hidden on mobile) */
@@ -92,43 +106,156 @@
 
 /* This class is added via JS: .header-nav--open */
 .header-nav--open {
+  /* Full screen overlay */
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  width: 100vw;
+  height: 100vh;
   background-color: var(--accent-color);
-  padding-bottom: 20px;
+  z-index: 9999; /* перекрити контент */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* вертикальне центрування меню */
+  padding: 0;
+}
+
+/* keep header row (logo + burger) visible at top */
+.header-nav--open .header-nav__main {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 24px;
 }
 
 .header-nav--open .header-nav__menu {
   display: flex;
-  margin-top: 20px;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0;
+  text-align: center;
 }
 
+/* Position the menu in the middle-lower area of the overlay while keeping
+   the header (logo + burger) fixed at the top. This places the menu items
+   stacked one-under-another with space above them. */
+.header-nav--open .header-nav__menu {
+  position: absolute;
+  left: 50%;
+  top: 20vh; /* push menu down from the top header row */
+  transform: translateX(-50%);
+  gap: 28px;
+}
+
+/* big centered menu links */
 .header-nav--open .header-nav__menu-link {
-  color: var(--title-on-dark-color);
-  font-size: 14px;
-  font-weight: 700;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  padding: 6px 0;
 }
 
+/* Pressed / click feedback for menu links */
+.header-nav__menu-link {
+  transition: transform 120ms ease, opacity 120ms ease, color 120ms ease;
+}
+.header-nav__menu-link--pressed {
+  transform: scale(0.98);
+  opacity: 0.85;
+}
+
+/* social and contacts hidden in burger overlay */
+.header-nav--open .header-nav__top {
+  display: none;
+}
+
+/* social links hidden in burger overlay */
 .header-nav--open .social-links--header {
-  display: flex;
-  gap: 18px;
-  margin-top: 25px;
+  display: none;
 }
 
 .header-nav--open .social-links__icon {
   fill: var(--title-on-dark-color);
+  width: 28px;
+  height: 28px;
+}
+
+/* social icon square wrapper */
+.header-nav--open .social-links__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(255,255,255,0.35);
+  border-radius: 6px;
+  color: var(--title-on-dark-color);
+}
+
+/* subtle footer/contact text under menu */
+.header-nav--open .header-nav__top-background {
+  /* keep the wrapper visible so the contact block can be shown inside overlay;
+     remove its background so it doesn't create an extra strip */
+  display: block;
+  background: transparent;
 }
 
 .header-nav--open .header-nav__top {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  gap: 6px;
-  background: none;
-  color: var(--text-on-dark-color);
+  font-size: 15px;
 }
 
-.header-nav--open .header-nav__email,
-.header-nav--open .header-nav__phone {
-  color: var(--text-on-dark-color);
+/* Make overlay layout adapt to shorter phone screens to avoid overlap */
+@media (max-height: 700px) {
+  .header-nav--open .header-nav__menu {
+    top: 20vh;
+  }
+  .header-nav--open .header-nav__top {
+    top: 50vh;
+  }
+  .header-nav--open .social-links--header {
+    top: calc(50vh + 80px);
+  }
+}
+
+@media (max-height: 600px) {
+  .header-nav--open .header-nav__menu {
+    top: 20vh;
+  }
+  .header-nav--open .header-nav__top {
+    top: 48vh;
+  }
+  .header-nav--open .social-links--header {
+    top: calc(48vh + 72px);
+  }
+}
+
+/* make logo smaller on overlay */
+.header-nav--open .header-nav__logo-img {
+  max-width: 120px;
+}
+
+/* Slight visual tweak to mimic the provided design: ensure overlay content
+   sits beneath the top bar and menu items are centered with generous spacing. */
+.header-nav--open .header-nav__main {
+  padding-top: 18px;
+}
+
+/* Make overlay background a little warmer and uniform across browsers */
+.header-nav--open {
+  background-color: #f0b500; /* fallback warm yellow */
+}
+
+/* ensure burger stays top-right and remains clickable */
+.header-nav--open .header-nav__burger {
+  position: relative;
+  z-index: 10010;
 }
 
 /* ============================== */
@@ -166,10 +293,47 @@
     gap: 15px;
   }
 
+  .social-links__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms ease;
+  }
+
   .social-links__icon {
-    width: 18px;
-    height: 18px;
+    width: 25px;
+    height: 25px;
+  }
+
+  /* Default state: white border + logo, orange background */
+  .social-links__icon .border_2yy {
+    stroke: var(--title-on-dark-color);
+    fill: none;
+    stroke-width: 1px;
+  }
+
+  .social-links__icon .outer_bDW {
+    fill: var(--accent-color);
+  }
+
+  .social-links__icon .logo_2gS {
     fill: var(--title-on-dark-color);
+  }
+
+  /* Hover state: white background, orange logo */
+  .social-links__link:hover .outer_bDW,
+  .social-links__link:focus-visible .outer_bDW {
+    fill: var(--title-on-dark-color);
+  }
+
+  .social-links__link:hover .logo_2gS,
+  .social-links__link:focus-visible .logo_2gS {
+    fill: var(--accent-color);
+  }
+
+  .social-links__link:hover .border_2yy,
+  .social-links__link:focus-visible .border_2yy {
+    stroke: var(--title-on-dark-color);
   }
 
   /* Hide burger */
@@ -184,5 +348,46 @@
   }
   .header-nav__main {
     padding-inline: 40px;
+  }
+
+  /* Header navigation: desktop hover color + animated rounded underline */
+  .header-nav__menu-link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1px; /* space for the underline */
+    transition: color 250ms ease;
+    text-decoration: none;
+  }
+
+  .header-nav__menu-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px; /* underline sits slightly below the text */
+    height: 2px;
+    width: 100%;
+    background: var(--big-title-color);
+    border-radius: 999px; /* fully rounded ends */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms cubic-bezier(.2,.2,.2,1);
+  }
+
+  .header-nav__menu-link:hover,
+  .header-nav__menu-link:focus {
+    color: var(--big-title-color);
+  }
+
+  .header-nav__menu-link:hover::after,
+  .header-nav__menu-link:focus::after {
+    transform: scaleX(1);
+  }
+
+  /* optional: a class for active link state */
+  .header-nav__menu-link--active {
+    color: var(--big-title-color);
+  }
+  .header-nav__menu-link--active::after {
+    transform: scaleX(1);
   }
 }
