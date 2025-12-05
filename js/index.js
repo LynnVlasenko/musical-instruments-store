@@ -15,6 +15,11 @@ function init() {
     module.initShopCategories();
   });
 
+  // Guitar of the month countdown timer
+  import("./guitar-month-timer.js").then((module) => {
+    module.initGuitarMonthTimer();
+  });
+
   // Remove focus from menu links and social icons after click
   const menuLinks = document.querySelectorAll(".header-nav__menu-link");
   const socialLinks = document.querySelectorAll(".social-links__link");

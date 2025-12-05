@@ -86,7 +86,7 @@ export function initPartnersCarousel() {
     let autoId = null;
     const startAuto = () => {
       stopAuto();
-      autoId = setInterval(() => scrollNext(true), 3000);
+      autoId = setInterval(() => scrollNext(true), 2000);
     };
     const stopAuto = () => {
       if (autoId) {

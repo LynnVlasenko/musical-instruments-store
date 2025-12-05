@@ -13,10 +13,11 @@
   gap: 12px;
 }
 
-/* Logos in a row and scroll like a carousel */
 .partners__list {
+  /* gap is controlled by a CSS variable so we can use it in calculations */
+  --partners-gap: 20px;
   display: flex;
-  gap: 40px;
+  gap: var(--partners-gap);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding: 10px 0;
@@ -31,13 +32,15 @@
 
 /* element */
 .partners__item {
-  scroll-snap-align: center;
-  flex: 0 0 auto;
+  /* snap to start so items align neatly and won't be partially visible after scrolling */
+  scroll-snap-align: start;
+  flex: 0 0 auto; /* overridden by media queries to set visible count */
 }
 
 /* logo */
 .partners__logo {
-  width: 140px;
+  width: 100%;
+  max-width: 160px; /* upper bound for large screens, overridden in media queries */
   height: auto;
   opacity: 0.75;
   transition: opacity 0.2s;
@@ -49,15 +52,67 @@
 }
 
 
-/**********************************************/
-/* Desktop view just for partners        */
-/**********************************************/
-@media (min-width: 1201px) {
-  .partners__carousel {
-    gap: 20px;
-  }
+/* Responsive: number of visible logos per viewport width
+   - up to 478px: 1 logo
+   - 479px–766px: 2 logos
+   - 767px–990px: 3 logos
+   - 991px and up: 6 logos
+*/
 
+/* Base: mobile-first — up to 478px => 1 item */
+@media (max-width: 478px) {
+  .partners__list {
+    --partners-gap: 12px;
+  }
+  .partners__carousel {
+    overflow: hidden; /* hide partially visible items at edges */
+  }
+  .partners__item {
+    flex: 0 0 calc(100%);
+  }
   .partners__logo {
-    width: 150px;
+    max-width: none;
+  }
+}
+
+/* 479px — 766px => 2 items */
+@media (min-width: 479px) and (max-width: 766px) {
+  .partners__list {
+    --partners-gap: 16px;
+  }
+  .partners__carousel {
+    overflow: hidden;
+  }
+  .partners__item {
+    flex: 0 0 calc((100% - var(--partners-gap)) / 2);
+  }
+}
+
+/* 767px — 990px => 3 items */
+@media (min-width: 767px) and (max-width: 990px) {
+  .partners__list {
+    --partners-gap: 24px;
+  }
+  .partners__carousel {
+    overflow: hidden;
+  }
+  .partners__item {
+    flex: 0 0 calc((100% - (var(--partners-gap) * 2)) / 3);
+  }
+}
+
+/* 991px and up => 6 items */
+@media (min-width: 991px) {
+  .partners__list {
+    --partners-gap: 40px;
+  }
+  .partners__carousel {
+    overflow: hidden;
+  }
+  .partners__item {
+    flex: 0 0 calc((100% - (var(--partners-gap) * 5)) / 6);
+  }
+  .partners__logo {
+    max-width: 160px;
   }
 }
