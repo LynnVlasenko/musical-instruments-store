@@ -124,7 +124,7 @@
 /* keep header row (logo + burger) visible at top */
 .header-nav--open .header-nav__main {
   position: absolute;
-  top: 22px;
+  top: 0px;
   left: 0;
   right: 0;
   display: flex;
@@ -238,7 +238,8 @@
 
 /* make logo smaller on overlay */
 .header-nav--open .header-nav__logo-img {
-  max-width: 120px;
+  max-width: 157px;
+  height: auto;
 }
 
 /* Slight visual tweak to mimic the provided design: ensure overlay content
