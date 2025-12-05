@@ -35,6 +35,9 @@
   /* snap to start so items align neatly and won't be partially visible after scrolling */
   scroll-snap-align: start;
   flex: 0 0 auto; /* overridden by media queries to set visible count */
+  display: flex;
+  justify-content: center; /* центр по горизонталі */
+  align-items: center; 
 }
 
 /* logo */
