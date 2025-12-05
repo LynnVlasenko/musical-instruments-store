@@ -51,6 +51,28 @@ ul {
   color: var(--accent-color);
 }
 
+/* ===== BUTTONS ===== */
+.btn {
+  width: 127px;
+  height: 49px;
+  background-color: var(--dark-background-color);
+  color: var(--title-on-dark-color);
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+}
+
 @media (min-width: 768px) {
   .container {
     padding: 0px 40px;

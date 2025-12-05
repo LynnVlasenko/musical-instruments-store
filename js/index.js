@@ -6,6 +6,10 @@ function init() {
   import("./partners-carousel.js").then((module) => {
     module.initPartnersCarousel();
   });
+  // New Arrivals carousel (arrows only, no autoplay)
+  import("./new-arrivals-carousel.js").then((module) => {
+    module.initNewArrivalsCarousel();
+  });
 
   // Remove focus from menu links and social icons after click
   const menuLinks = document.querySelectorAll(".header-nav__menu-link");

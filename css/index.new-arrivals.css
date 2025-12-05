@@ -60,21 +60,19 @@
   align-items: center;
   gap: 12px;
 }
-/* ===== New Arrivals — responsive grid for carousel (mobile-first) ===== */
 
-/* Основні стилі треку */
-.new-arrivals__track-wrapper {
-  overflow: hidden; /* ховаємо зайвий контент для "одна картка на екран" */
-}
-
+/* Track — scrollable list with cloned items for infinite loop */
 .new-arrivals__track {
   display: flex;
   gap: 20px; /* базовий gap для мобайлу */
-  padding: 8px 4px 18px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
+  padding: 8px 4px 18px;
+
+  /* hides a non-beautiful scrollbar */
+  scrollbar-width: none;
 }
 .new-arrivals__track::-webkit-scrollbar {
   display: none;
@@ -106,23 +104,28 @@
 /* Текст/ціна/кнопка — базовий вигляд */
 .product-card__name {
   color: var(--subtitle-color);
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 400;
+  min-height: 2.6em; /* фіксована висота для 2 рядків */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: text-decoration 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.product-card__name:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--subtitle-color);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
 }
 .product-card__price {
   color: var(--accent-color);
-  font-weight: 700;
+  font-weight: 400;
   font-size: 18px;
-}
-.product-card__btn {
-  background: var(--dark-background-color);
-  color: var(--title-on-dark-color);
-  border-radius: 4px;
-  padding: 16px 24px;
-  align-self: flex-start;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.2s ease-in-out;
 }
 
 /* ---------- 2 cards per view (>=761px up to 990px) ---------- */
@@ -156,13 +159,4 @@
   .new-arrivals__item {
     flex: 0 0 calc((100% - 3 * 40px) / 4); /* 4 картки, 3 проміжки */
   }
-}
-
-/* ---------- Optional helpers for JS (зручно читати) ---------- */
-/* додаємо змінну, щоб JS міг швидко знайти "екранну" ширину елемента */
-.new-arrivals__track[data-cards-per-view="1"] .new-arrivals__item {
-  /* optional */
-}
-.new-arrivals__track[data-cards-per-view="2"] .new-arrivals__item {
-  /* optional */
 }

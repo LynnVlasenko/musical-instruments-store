@@ -106,20 +106,6 @@
   margin-bottom: 16px;
 }
 
-.shop-card__btn {
-  background-color: var(--big-title-color);
-  color: var(--title-on-dark-color);
-  border: none;
-  padding: 10px 24px;
-  cursor: pointer;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-.shop-card__btn:hover {
-  background-color: var(--accent-button-color);
-}
-
 /* ===== RESPONSIVE ===== */
 
 /* 2 columns: 480px–990px */
