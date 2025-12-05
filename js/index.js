@@ -10,6 +10,10 @@ function init() {
   import("./new-arrivals-carousel.js").then((module) => {
     module.initNewArrivalsCarousel();
   });
+  // Shop categories smooth switching
+  import("./shop-categories.js").then((module) => {
+    module.initShopCategories();
+  });
 
   // Remove focus from menu links and social icons after click
   const menuLinks = document.querySelectorAll(".header-nav__menu-link");
