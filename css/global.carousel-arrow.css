@@ -7,14 +7,22 @@
   justify-content: center;
   align-items: center;
 
-  width: 42px;
-  height: 42px;
+  /* fixed square so border-radius:50% always yields a circle */
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  aspect-ratio: 1 / 1;
   border-radius: 50%;
   border: none;
+  box-sizing: border-box;
 
   background: rgba(0, 0, 0, 0.45); /* dark translucent background */
+  -webkit-appearance: none;
+  appearance: none;
   cursor: pointer;
   padding: 0;
+  line-height: 0;
   transition: background 0.2s ease;
 }
 
@@ -24,8 +32,9 @@
   opacity: 0.8;
 }
 
+/* Ensure the 'prev' arrow points left by rotating the icon */
 .carousel-arrow--prev {
-  transform: rotate(180deg); 
+  transform: rotate(180deg);
 }
 
 /* Hover – mobile also has a reaction */

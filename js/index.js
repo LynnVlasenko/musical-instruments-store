@@ -2,6 +2,10 @@ function init() {
   import("./global.header-burger.js").then((module) => {
     module.initHeaderBurger(); // ←here we launch a burger
   });
+  // Partners carousel (arrows + autoplay)
+  import("./partners-carousel.js").then((module) => {
+    module.initPartnersCarousel();
+  });
 
   // Remove focus from menu links and social icons after click
   const menuLinks = document.querySelectorAll(".header-nav__menu-link");

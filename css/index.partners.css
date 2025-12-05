@@ -20,6 +20,7 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding: 10px 0;
+  align-items: center; /* center logos vertically inside the scrolling row */
 
   /* hides a non-beautiful scrollbar */
   scrollbar-width: none;
@@ -40,6 +41,7 @@
   height: auto;
   opacity: 0.75;
   transition: opacity 0.2s;
+  display: block; /* removes inline baseline alignment so logos sit centered */
 }
 
 .partners__logo:hover {
